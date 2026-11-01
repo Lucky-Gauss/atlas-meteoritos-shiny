@@ -2,7 +2,7 @@ name: Publicar Atlas de meteoritos
 on:
   push:
     branches: [main]
-    paths: ['atlas-publicacion.zip', '.github/workflows/publicar.yml']
+    paths: ['atlas-publicacion.zip', 'app/**', '.github/workflows/publicar.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -16,8 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Preparar archivos de la aplicación
-        run: unzip -o atlas-publicacion.zip
+      - name: Preparar datos y recursos
+        run: unzip -n atlas-publicacion.zip
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
