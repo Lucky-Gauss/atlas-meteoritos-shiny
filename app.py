@@ -61,7 +61,7 @@ app_ui = ui.page_fluid(
               for i, (page, label) in enumerate([('explorer', 'Explorar'), ('analysis', 'Análisis'),
                                                 ('catalogue', 'Catálogo'), ('about', 'Los datos')])],
             **{'aria-label': 'Navegación principal'}),
-        ui.div(ui.span(class_='status-dot'), 'ATLAS INTERACTIVO', class_='local-badge'),
+        ui.div(ui.span(class_='status-dot'), 'BORRADOR LOCAL', class_='local-badge'),
         class_='topbar',
     ),
     ui.div(
@@ -158,7 +158,7 @@ app_ui = ui.page_fluid(
                        ui.p('Un catálogo histórico y público para practicar análisis exploratorio, programación reactiva y lectura crítica de evidencia.'), class_='section-intro'),
                 ui.output_ui('about_data'), id='page-about', class_='atlas-page'),
             ui.tags.footer(ui.span('ATLAS DE METEORITOS'), ui.span('NASA · The Meteoritical Society'),
-                           ui.span('Borrador universitario · 2026'), class_='footer'),
+                           ui.span('Borrador universitario local · 2026'), class_='footer'),
             id='main-content'),
         class_='app-shell'),
     title='Atlas de meteoritos', lang='es',

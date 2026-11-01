@@ -1,0 +1,7 @@
+shiny==1.9.0
+pandas==3.1.0
+numpy==2.5.4
+plotly==7.1.0
+reportlab==5.1.0
+pypdf==6.21.4
+pillow==13.0.0

@@ -1,0 +1,13 @@
+.venv/
+.sl/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+publicacion/
+output/*
+!output/Informe_Atlas_Meteoritos.pdf
+.env
+.env.*
+*.log
+*.pid
+

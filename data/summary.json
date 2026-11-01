@@ -1,0 +1,4057 @@
+{
+  "rows": 45716,
+  "original_columns": 10,
+  "prepared_columns": 15,
+  "class_count": 466,
+  "conditions": {
+    "Fell": 1107,
+    "Found": 44609
+  },
+  "nametypes": {
+    "Valid": 45641,
+    "Relict": 75
+  },
+  "year_min": 860,
+  "year_max": 2013,
+  "year_cutoff": 2026,
+  "mass_min_g": 0.0,
+  "mass_min_positive_g": 0.01,
+  "mass_max_g": 60000000.0,
+  "mass_median_g": 32.6,
+  "mass_q1_g": 7.2,
+  "mass_q3_g": 202.6,
+  "mass_mean_g": 13278.078548601514,
+  "mass_positive_median_g": 32.695,
+  "mass_total_g": 605281210.638,
+  "quality": {
+    "missing_by_original_column": {
+      "name": 0,
+      "id": 0,
+      "nametype": 0,
+      "recclass": 0,
+      "mass (g)": 131,
+      "fall": 0,
+      "year": 291,
+      "reclat": 7315,
+      "reclong": 7315,
+      "GeoLocation": 7315
+    },
+    "duplicate_complete_rows": 0,
+    "duplicate_ids": 0,
+    "duplicate_names": 0,
+    "missing_mass": 131,
+    "zero_mass": 19,
+    "negative_mass": 0,
+    "missing_year": 291,
+    "anomalous_year": 1,
+    "missing_coordinates": 7315,
+    "zero_zero_coordinates": 6214,
+    "out_of_range_coordinates": 1,
+    "map_eligible": 32186,
+    "year_eligible": 45424,
+    "positive_mass_eligible": 45566,
+    "nonnegative_mass_eligible": 45585,
+    "removed_rows": 0,
+    "imputed_values": 0
+  },
+  "by_condition": {
+    "Fell": {
+      "count": 1107,
+      "percent": 2.4214716948114443,
+      "mass_n": 1075,
+      "median_mass_g": 2800.0,
+      "q1_mass_g": 686.0,
+      "q3_mass_g": 10450.0,
+      "map_n": 1096
+    },
+    "Found": {
+      "count": 44609,
+      "percent": 97.57852830518856,
+      "mass_n": 44510,
+      "median_mass_g": 30.5,
+      "q1_mass_g": 6.94,
+      "q3_mass_g": 178.0,
+      "map_n": 31090
+    }
+  },
+  "top_classes": [
+    {
+      "class": "L6",
+      "count": 8285,
+      "percent": 18.12275789657888
+    },
+    {
+      "class": "H5",
+      "count": 7142,
+      "percent": 15.622539154781695
+    },
+    {
+      "class": "L5",
+      "count": 4796,
+      "percent": 10.490856592877767
+    },
+    {
+      "class": "H6",
+      "count": 4528,
+      "percent": 9.904628576428385
+    },
+    {
+      "class": "H4",
+      "count": 4211,
+      "percent": 9.211217079359525
+    },
+    {
+      "class": "LL5",
+      "count": 2766,
+      "percent": 6.050398110070873
+    },
+    {
+      "class": "LL6",
+      "count": 2043,
+      "percent": 4.468894916440633
+    },
+    {
+      "class": "L4",
+      "count": 1253,
+      "percent": 2.740834718698049
+    },
+    {
+      "class": "H4/5",
+      "count": 428,
+      "percent": 0.9362148919415522
+    },
+    {
+      "class": "CM2",
+      "count": 416,
+      "percent": 0.9099658762796395
+    },
+    {
+      "class": "H3",
+      "count": 386,
+      "percent": 0.8443433371248579
+    },
+    {
+      "class": "L3",
+      "count": 365,
+      "percent": 0.7984075597165106
+    },
+    {
+      "class": "CO3",
+      "count": 335,
+      "percent": 0.7327850205617289
+    },
+    {
+      "class": "Ureilite",
+      "count": 300,
+      "percent": 0.6562253915478169
+    },
+    {
+      "class": "Iron, IIIAB",
+      "count": 285,
+      "percent": 0.6234141219704261
+    }
+  ],
+  "class_counts": {
+    "L6": 8285,
+    "H5": 7142,
+    "L5": 4796,
+    "H6": 4528,
+    "H4": 4211,
+    "LL5": 2766,
+    "LL6": 2043,
+    "L4": 1253,
+    "H4/5": 428,
+    "CM2": 416,
+    "H3": 386,
+    "L3": 365,
+    "CO3": 335,
+    "Ureilite": 300,
+    "Iron, IIIAB": 285,
+    "LL4": 268,
+    "CV3": 256,
+    "Diogenite": 241,
+    "Howardite": 240,
+    "LL": 225,
+    "Eucrite": 221,
+    "Eucrite-pmict": 207,
+    "E3": 206,
+    "H5/6": 193,
+    "Mesosiderite": 137,
+    "CR2": 135,
+    "LL3": 128,
+    "EH3": 120,
+    "Iron, IIAB": 118,
+    "Iron, ungrouped": 113,
+    "H~5": 111,
+    "L5/6": 109,
+    "Eucrite-mmict": 108,
+    "Martian (shergottite)": 99,
+    "Iron": 94,
+    "L~6": 94,
+    "CK5": 94,
+    "L3.5": 88,
+    "H": 84,
+    "Iron, IAB-MG": 84,
+    "Eucrite-br": 80,
+    "OC": 79,
+    "H3.8": 76,
+    "H3.7": 75,
+    "CK4": 75,
+    "EL6": 72,
+    "Iron, IVA": 69,
+    "Lunar (anorth)": 69,
+    "H4-6": 67,
+    "L3.8": 66,
+    "Relict OC": 65,
+    "Aubrite": 63,
+    "H5-6": 63,
+    "L4/5": 59,
+    "Achondrite-ung": 57,
+    "Acapulcoite": 54,
+    "Iron, IAB complex": 54,
+    "L6 ": 54,
+    "LL-melt breccia": 54,
+    "L3.4": 51,
+    "L": 50,
+    "Stone-uncl": 50,
+    "L3.7": 49,
+    "L3.6": 48,
+    "LL5/6": 48,
+    "H4-5": 47,
+    "Iron, IAB-ung": 46,
+    "H3-6": 43,
+    "H3.9": 43,
+    "H3.6": 42,
+    "R4": 42,
+    "L5-6": 41,
+    "Lunar": 41,
+    "Lodranite": 40,
+    "LL5-6": 40,
+    "H3-5": 39,
+    "Pallasite, PMG": 38,
+    "H3/4": 35,
+    "Pallasite": 35,
+    "LL4-6": 34,
+    "L4-6": 33,
+    "Brachinite": 33,
+    "L3-6": 32,
+    "Eucrite-unbr": 32,
+    "L~5": 32,
+    "Iron, IAB-sLL": 28,
+    "LL3.8": 28,
+    "L3.9": 27,
+    "Lunar (feldsp. breccia)": 27,
+    "L/LL6": 26,
+    "Eucrite-cm": 26,
+    "L/LL3": 26,
+    "LL3.7": 26,
+    "Winonaite": 25,
+    "L-imp melt": 25,
+    "L4-5": 24,
+    "Ureilite-pmict": 23,
+    "LL7": 22,
+    "H~6": 22,
+    "H5 ": 22,
+    "Angrite": 21,
+    "CH3": 21,
+    "L7": 21,
+    "L-melt rock": 21,
+    "L5 ": 21,
+    "L/LL4": 20,
+    "LL3.4": 20,
+    "R5": 20,
+    "Iron, IID": 19,
+    "EL3": 19,
+    "CM1": 19,
+    "EH4": 18,
+    "H~4": 18,
+    "CM1/2": 18,
+    "H3.5": 18,
+    "Iron, IAB-sHL": 17,
+    "LL3.6": 17,
+    "LL3.5": 17,
+    "L3.3": 17,
+    "CK6": 17,
+    "LL3.9": 16,
+    "L/LL5": 16,
+    "H3.4": 16,
+    "Lunar (basalt)": 16,
+    "LL3.3": 15,
+    "Chondrite-ung": 15,
+    "L3.2": 15,
+    "R3": 15,
+    "C2-ung": 14,
+    "Iron, IIE": 14,
+    "LL3.2": 14,
+    "Martian (nakhlite)": 14,
+    "Iron, IIIE": 14,
+    "Iron, IVB": 14,
+    "L-melt breccia": 14,
+    "H/L4": 13,
+    "L3-5": 13,
+    "L3.1": 13,
+    "CK3": 13,
+    "EL4": 13,
+    "CO3.5": 12,
+    "C3-ung": 12,
+    "H7": 12,
+    "CK4/5": 12,
+    "L3/4": 12,
+    "Diogenite-pm": 11,
+    "Pallasite, PMG-an": 11,
+    "H/L6": 11,
+    "H-imp melt": 11,
+    "H4 ": 11,
+    "H4-an": 10,
+    "H3-4": 10,
+    "Iron, IAB-sLM": 10,
+    "Iron, IC": 10,
+    "R3-6": 10,
+    "LL4-5": 10,
+    "L~4": 10,
+    "L6-melt breccia": 10,
+    "LL3-6": 9,
+    "CI1": 9,
+    "E6": 9,
+    "EH4/5": 9,
+    "Iron, IIIF": 9,
+    "L6/7": 9,
+    "R3.8": 9,
+    "Iron, IAB-sLH": 9,
+    "R6": 9,
+    "Diogenite-olivine": 9,
+    "L3.8-6": 9,
+    "Achondrite-prim": 9,
+    "LL~5": 9,
+    "CO3.2": 8,
+    "C": 8,
+    "Iron, IIC": 8,
+    "CR": 8,
+    "H-melt rock": 8,
+    "CB": 8,
+    "OC3": 8,
+    "Unknown": 7,
+    "CO3.3": 7,
+    "Iron, IIE-an": 7,
+    "CO3.6": 7,
+    "H3.3": 7,
+    "LL(L)3": 7,
+    "H/L5": 7,
+    "E": 7,
+    "LL-melt rock": 7,
+    "Mesosiderite-C": 7,
+    "Mesosiderite-A1": 6,
+    "Iron, IIF": 6,
+    "EH5": 6,
+    "EL5": 6,
+    "Iron, IVA-an": 6,
+    "Lunar (gabbro)": 6,
+    "Iron, IIG": 6,
+    "Mesosiderite-an": 6,
+    "H/L3": 6,
+    "Acapulcoite/Lodranite": 6,
+    "CK5/6": 6,
+    "H-metal": 6,
+    "H4/6": 6,
+    "EH-imp melt": 6,
+    "Aubrite-an": 6,
+    "E3-an": 6,
+    "LL3.1": 6,
+    "CO3.1": 6,
+    "R3-5": 6,
+    "CBa": 5,
+    "CO3.4": 5,
+    "Mesosiderite-B2": 5,
+    "H3.9/4": 5,
+    "LL4/5": 5,
+    "LL~6": 5,
+    "L(LL)3": 5,
+    "Iron, IAB-sHH": 5,
+    "L-metal": 5,
+    "L/LL5/6": 5,
+    "CBb": 5,
+    "EH6": 5,
+    "Pallasite, ungrouped": 5,
+    "E-an": 5,
+    "E5": 5,
+    "Ureilite-an": 4,
+    "L3-4": 4,
+    "R3.8-6": 4,
+    "E4": 4,
+    "Eucrite-Mg rich": 4,
+    "Mesosiderite-B1": 4,
+    "CO3.0": 4,
+    "CV3-an": 4,
+    "L/LL3.4": 4,
+    "LL3.0": 4,
+    "Pallasite, PES": 4,
+    "Iron, IAB?": 4,
+    "H3.9-6": 4,
+    "H-an": 4,
+    "Chondrite-fusion crust": 4,
+    "H5-melt breccia": 4,
+    "Mesosiderite-B": 4,
+    "Iron, IIIAB?": 4,
+    "Fusion crust": 4,
+    "R3.9": 4,
+    "LL6/7": 4,
+    "H-melt breccia": 4,
+    "CM": 4,
+    "LL3.15": 3,
+    "Mesosiderite-A3": 3,
+    "Iron, IIIAB-an": 3,
+    "LL3.8-6": 3,
+    "R3.6": 3,
+    "H3.0": 3,
+    "Mesosiderite-B4": 3,
+    "Mesosiderite-A2": 3,
+    "C4-ung": 3,
+    "L/LL3-5": 3,
+    "CK3-an": 3,
+    "L/LL~6": 3,
+    "H6-melt breccia": 3,
+    "Eucrite-an": 3,
+    "H~4/5": 3,
+    "Diogenite-an": 3,
+    "L4 ": 3,
+    "Mesosiderite-A4": 3,
+    "CO3.8": 3,
+    "R": 3,
+    "Acapulcoite/lodranite": 3,
+    "CK4-an": 3,
+    "Iron, IAB-an": 3,
+    "CK": 3,
+    "LL3.10": 3,
+    "Enst achon": 3,
+    "Enst achon-ung": 3,
+    "L5-melt breccia": 3,
+    "LL~3": 3,
+    "H3.2-an": 3,
+    "Iron?": 2,
+    "Martian (chassignite)": 2,
+    "H?": 2,
+    "K3": 2,
+    "H3.6-6": 2,
+    "H3.8/4": 2,
+    "H3.9-5": 2,
+    "L(?)3": 2,
+    "Iron, IID-an": 2,
+    "H3.1": 2,
+    "L3.0": 2,
+    "C6": 2,
+    "C4": 2,
+    "H5-an": 2,
+    "Mesosiderite-A": 2,
+    "L3.9-6": 2,
+    "H(L)3": 2,
+    "CM-an": 2,
+    "L/LL~5": 2,
+    "H3.2": 2,
+    "Lunar (bas/anor)": 2,
+    "H(5?)": 2,
+    "LL-imp melt": 2,
+    "L3.05": 2,
+    "L/LL3.2": 2,
+    "CR1": 2,
+    "LL6 ": 2,
+    "EH": 2,
+    "EL6/7": 2,
+    "Mesosiderite-C2": 2,
+    "H3.7-5": 2,
+    "L(LL)3.05": 2,
+    "EL-melt rock": 2,
+    "Iron, IC-an": 2,
+    "Lunar (bas. breccia)": 2,
+    "R3/4": 2,
+    "L3.8-5": 2,
+    "R3.7": 2,
+    "H3.05": 2,
+    "H3.10": 2,
+    "LL3-5": 2,
+    "H6/7": 2,
+    "LL6-melt breccia": 2,
+    "Martian (basaltic breccia)": 2,
+    "H3.8-6": 2,
+    "H3.8-an": 2,
+    "CR2-an": 1,
+    "H/L3.9": 1,
+    "H5-7": 1,
+    "Mesosiderite-A3/4": 1,
+    "EH3/4-an": 1,
+    "L3.7-6": 1,
+    "EH7-an": 1,
+    "LL3.00": 1,
+    "H/L3.6": 1,
+    "CO3.7": 1,
+    "L/LL6-an": 1,
+    "H3.8-5": 1,
+    "R3.8-5": 1,
+    "L3.9/4": 1,
+    "L/LL3.10": 1,
+    "L~3": 1,
+    "L(LL)3.5-3.7": 1,
+    "Iron, IIIE-an": 1,
+    "L3.4-3.7": 1,
+    "Martian (OPX)": 1,
+    "LL7(?)": 1,
+    "LL6(?)": 1,
+    "H3.5-4": 1,
+    "L3.7-3.9": 1,
+    "L3.7-4": 1,
+    "H3.7-6": 1,
+    "C1-ung": 1,
+    "Relict H": 1,
+    "H3-an": 1,
+    "R3.5-6": 1,
+    "L/LL3-6": 1,
+    "H/L3.5": 1,
+    "R3-4": 1,
+    "H(L)3-an": 1,
+    "L/LL~4": 1,
+    "LL3/4": 1,
+    "H3.4/3.5": 1,
+    "Mesosiderite?": 1,
+    "L3.5-3.7": 1,
+    "Iron, IIAB-an": 1,
+    "L3.3-3.7": 1,
+    "L3.2-3.6": 1,
+    "L3.3-3.6": 1,
+    "C2": 1,
+    "C4/5": 1,
+    "L3.5-5": 1,
+    "L/LL(?)3": 1,
+    "H4(?)": 1,
+    "Relict iron": 1,
+    "EL4/5": 1,
+    "L5-7": 1,
+    "H3 ": 1,
+    "H6 ": 1,
+    "H3.8-4": 1,
+    "EL7": 1,
+    "CH/CBb": 1,
+    "H/L~4": 1,
+    "LL3.7-6": 1,
+    "H3.7/3.8": 1,
+    "L3.7/3.8": 1,
+    "L3.5-3.9": 1,
+    "L3.2-3.5": 1,
+    "L3.3-3.5": 1,
+    "L3.0-3.7": 1,
+    "K": 1,
+    "L3.10": 1,
+    "L/LL4/5": 1,
+    "L3.8-an": 1,
+    "C5/6-ung": 1,
+    "CV2": 1,
+    "R4/5": 1,
+    "H/L3-4": 1,
+    "L(H)3": 1,
+    "CO3 ": 1,
+    "CH3 ": 1,
+    "LL~4": 1,
+    "LL~4/5": 1,
+    "L(LL)~4": 1,
+    "Impact melt breccia": 1,
+    "H/L3.7": 1,
+    "LL3-4": 1,
+    "CK3/4": 1,
+    "Martian": 1,
+    "Lunar (bas/gab brec)": 1,
+    "LL<3.5": 1,
+    "CK3.8": 1,
+    "L/LL-melt rock": 1,
+    "EL6 ": 1,
+    "Iron, IAB-sHL-an": 1,
+    "CM2-an": 1,
+    "L4-melt rock": 1,
+    "L6-melt rock": 1,
+    "H/L4/5": 1,
+    "EL3/4": 1,
+    "H/L6-melt rock": 1,
+    "L3-7": 1,
+    "R3.4": 1,
+    "LL3.05": 1,
+    "LL4/6": 1,
+    "LL3.8-4": 1,
+    "H3.15": 1,
+    "C3.0-ung": 1,
+    "LL(L)3.1": 1,
+    "LL6-an": 1,
+    "L4-melt breccia": 1,
+    "Howardite-an": 1,
+    "H4-melt breccia": 1,
+    "L3-melt breccia": 1,
+    "L~4-6": 1,
+    "R3.5-4": 1,
+    "CR7": 1,
+    "Lunar (norite)": 1,
+    "L3.00": 1,
+    "H3.0-3.4": 1,
+    "L/LL4-6": 1,
+    "EH7": 1,
+    "L4-an": 1,
+    "H3.8/3.9": 1,
+    "L3.9-5": 1,
+    "H3.4-5": 1,
+    "L3.0-3.9": 1,
+    "L3.5-3.8": 1,
+    "H3.2-3.7": 1,
+    "L3.6-4": 1,
+    "Iron, IIE?": 1,
+    "C3/4-ung": 1,
+    "L/LL3.5": 1,
+    "L/LL3.6/3.7": 1,
+    "H/L4-5": 1,
+    "Pallasite?": 1,
+    "LL5-7": 1,
+    "LL3.9/4": 1,
+    "CR-an": 1,
+    "L/LL5-6": 1,
+    "L(LL)5": 1,
+    "L(LL)6": 1,
+    "LL3.1-3.5": 1,
+    "Lodranite-an": 1,
+    "H3.2-6": 1,
+    "H(?)4": 1,
+    "E5-an": 1,
+    "EH6-an": 1,
+    "Stone-ung": 1,
+    "C1/2-ung": 1,
+    "L/LL": 1
+  },
+  "year_counts": [
+    {
+      "year": 860,
+      "count": 1
+    },
+    {
+      "year": 920,
+      "count": 1
+    },
+    {
+      "year": 1399,
+      "count": 1
+    },
+    {
+      "year": 1490,
+      "count": 1
+    },
+    {
+      "year": 1491,
+      "count": 1
+    },
+    {
+      "year": 1495,
+      "count": 1
+    },
+    {
+      "year": 1519,
+      "count": 1
+    },
+    {
+      "year": 1575,
+      "count": 1
+    },
+    {
+      "year": 1583,
+      "count": 1
+    },
+    {
+      "year": 1600,
+      "count": 1
+    },
+    {
+      "year": 1621,
+      "count": 1
+    },
+    {
+      "year": 1623,
+      "count": 1
+    },
+    {
+      "year": 1628,
+      "count": 1
+    },
+    {
+      "year": 1632,
+      "count": 1
+    },
+    {
+      "year": 1636,
+      "count": 1
+    },
+    {
+      "year": 1637,
+      "count": 1
+    },
+    {
+      "year": 1647,
+      "count": 1
+    },
+    {
+      "year": 1654,
+      "count": 1
+    },
+    {
+      "year": 1662,
+      "count": 1
+    },
+    {
+      "year": 1668,
+      "count": 1
+    },
+    {
+      "year": 1671,
+      "count": 1
+    },
+    {
+      "year": 1688,
+      "count": 1
+    },
+    {
+      "year": 1704,
+      "count": 1
+    },
+    {
+      "year": 1715,
+      "count": 1
+    },
+    {
+      "year": 1716,
+      "count": 1
+    },
+    {
+      "year": 1723,
+      "count": 1
+    },
+    {
+      "year": 1724,
+      "count": 1
+    },
+    {
+      "year": 1740,
+      "count": 1
+    },
+    {
+      "year": 1741,
+      "count": 1
+    },
+    {
+      "year": 1749,
+      "count": 1
+    },
+    {
+      "year": 1750,
+      "count": 1
+    },
+    {
+      "year": 1751,
+      "count": 1
+    },
+    {
+      "year": 1753,
+      "count": 2
+    },
+    {
+      "year": 1766,
+      "count": 1
+    },
+    {
+      "year": 1768,
+      "count": 2
+    },
+    {
+      "year": 1769,
+      "count": 1
+    },
+    {
+      "year": 1773,
+      "count": 1
+    },
+    {
+      "year": 1775,
+      "count": 2
+    },
+    {
+      "year": 1776,
+      "count": 1
+    },
+    {
+      "year": 1779,
+      "count": 1
+    },
+    {
+      "year": 1781,
+      "count": 1
+    },
+    {
+      "year": 1784,
+      "count": 2
+    },
+    {
+      "year": 1785,
+      "count": 1
+    },
+    {
+      "year": 1787,
+      "count": 1
+    },
+    {
+      "year": 1790,
+      "count": 1
+    },
+    {
+      "year": 1791,
+      "count": 1
+    },
+    {
+      "year": 1792,
+      "count": 1
+    },
+    {
+      "year": 1793,
+      "count": 1
+    },
+    {
+      "year": 1794,
+      "count": 1
+    },
+    {
+      "year": 1795,
+      "count": 2
+    },
+    {
+      "year": 1796,
+      "count": 2
+    },
+    {
+      "year": 1797,
+      "count": 1
+    },
+    {
+      "year": 1798,
+      "count": 2
+    },
+    {
+      "year": 1801,
+      "count": 1
+    },
+    {
+      "year": 1803,
+      "count": 3
+    },
+    {
+      "year": 1804,
+      "count": 6
+    },
+    {
+      "year": 1805,
+      "count": 3
+    },
+    {
+      "year": 1806,
+      "count": 1
+    },
+    {
+      "year": 1807,
+      "count": 2
+    },
+    {
+      "year": 1808,
+      "count": 5
+    },
+    {
+      "year": 1809,
+      "count": 1
+    },
+    {
+      "year": 1810,
+      "count": 5
+    },
+    {
+      "year": 1811,
+      "count": 3
+    },
+    {
+      "year": 1812,
+      "count": 4
+    },
+    {
+      "year": 1813,
+      "count": 2
+    },
+    {
+      "year": 1814,
+      "count": 5
+    },
+    {
+      "year": 1815,
+      "count": 2
+    },
+    {
+      "year": 1817,
+      "count": 1
+    },
+    {
+      "year": 1818,
+      "count": 5
+    },
+    {
+      "year": 1819,
+      "count": 3
+    },
+    {
+      "year": 1820,
+      "count": 1
+    },
+    {
+      "year": 1821,
+      "count": 1
+    },
+    {
+      "year": 1822,
+      "count": 8
+    },
+    {
+      "year": 1823,
+      "count": 2
+    },
+    {
+      "year": 1824,
+      "count": 3
+    },
+    {
+      "year": 1825,
+      "count": 3
+    },
+    {
+      "year": 1826,
+      "count": 3
+    },
+    {
+      "year": 1827,
+      "count": 3
+    },
+    {
+      "year": 1828,
+      "count": 2
+    },
+    {
+      "year": 1829,
+      "count": 4
+    },
+    {
+      "year": 1830,
+      "count": 2
+    },
+    {
+      "year": 1831,
+      "count": 2
+    },
+    {
+      "year": 1832,
+      "count": 1
+    },
+    {
+      "year": 1833,
+      "count": 1
+    },
+    {
+      "year": 1834,
+      "count": 3
+    },
+    {
+      "year": 1835,
+      "count": 2
+    },
+    {
+      "year": 1836,
+      "count": 5
+    },
+    {
+      "year": 1837,
+      "count": 5
+    },
+    {
+      "year": 1838,
+      "count": 7
+    },
+    {
+      "year": 1839,
+      "count": 5
+    },
+    {
+      "year": 1840,
+      "count": 7
+    },
+    {
+      "year": 1841,
+      "count": 4
+    },
+    {
+      "year": 1842,
+      "count": 5
+    },
+    {
+      "year": 1843,
+      "count": 7
+    },
+    {
+      "year": 1844,
+      "count": 4
+    },
+    {
+      "year": 1845,
+      "count": 3
+    },
+    {
+      "year": 1846,
+      "count": 7
+    },
+    {
+      "year": 1847,
+      "count": 5
+    },
+    {
+      "year": 1848,
+      "count": 4
+    },
+    {
+      "year": 1849,
+      "count": 3
+    },
+    {
+      "year": 1850,
+      "count": 8
+    },
+    {
+      "year": 1851,
+      "count": 3
+    },
+    {
+      "year": 1852,
+      "count": 8
+    },
+    {
+      "year": 1853,
+      "count": 5
+    },
+    {
+      "year": 1854,
+      "count": 9
+    },
+    {
+      "year": 1855,
+      "count": 9
+    },
+    {
+      "year": 1856,
+      "count": 6
+    },
+    {
+      "year": 1857,
+      "count": 10
+    },
+    {
+      "year": 1858,
+      "count": 8
+    },
+    {
+      "year": 1859,
+      "count": 5
+    },
+    {
+      "year": 1860,
+      "count": 11
+    },
+    {
+      "year": 1861,
+      "count": 6
+    },
+    {
+      "year": 1862,
+      "count": 3
+    },
+    {
+      "year": 1863,
+      "count": 15
+    },
+    {
+      "year": 1864,
+      "count": 4
+    },
+    {
+      "year": 1865,
+      "count": 8
+    },
+    {
+      "year": 1866,
+      "count": 12
+    },
+    {
+      "year": 1867,
+      "count": 8
+    },
+    {
+      "year": 1868,
+      "count": 16
+    },
+    {
+      "year": 1869,
+      "count": 12
+    },
+    {
+      "year": 1870,
+      "count": 6
+    },
+    {
+      "year": 1871,
+      "count": 7
+    },
+    {
+      "year": 1872,
+      "count": 6
+    },
+    {
+      "year": 1873,
+      "count": 10
+    },
+    {
+      "year": 1874,
+      "count": 6
+    },
+    {
+      "year": 1875,
+      "count": 13
+    },
+    {
+      "year": 1876,
+      "count": 9
+    },
+    {
+      "year": 1877,
+      "count": 9
+    },
+    {
+      "year": 1878,
+      "count": 9
+    },
+    {
+      "year": 1879,
+      "count": 14
+    },
+    {
+      "year": 1880,
+      "count": 15
+    },
+    {
+      "year": 1881,
+      "count": 10
+    },
+    {
+      "year": 1882,
+      "count": 9
+    },
+    {
+      "year": 1883,
+      "count": 10
+    },
+    {
+      "year": 1884,
+      "count": 11
+    },
+    {
+      "year": 1885,
+      "count": 7
+    },
+    {
+      "year": 1886,
+      "count": 10
+    },
+    {
+      "year": 1887,
+      "count": 21
+    },
+    {
+      "year": 1888,
+      "count": 15
+    },
+    {
+      "year": 1889,
+      "count": 15
+    },
+    {
+      "year": 1890,
+      "count": 20
+    },
+    {
+      "year": 1891,
+      "count": 10
+    },
+    {
+      "year": 1892,
+      "count": 11
+    },
+    {
+      "year": 1893,
+      "count": 12
+    },
+    {
+      "year": 1894,
+      "count": 10
+    },
+    {
+      "year": 1895,
+      "count": 10
+    },
+    {
+      "year": 1896,
+      "count": 10
+    },
+    {
+      "year": 1897,
+      "count": 12
+    },
+    {
+      "year": 1898,
+      "count": 17
+    },
+    {
+      "year": 1899,
+      "count": 14
+    },
+    {
+      "year": 1900,
+      "count": 17
+    },
+    {
+      "year": 1901,
+      "count": 10
+    },
+    {
+      "year": 1902,
+      "count": 12
+    },
+    {
+      "year": 1903,
+      "count": 22
+    },
+    {
+      "year": 1904,
+      "count": 11
+    },
+    {
+      "year": 1905,
+      "count": 14
+    },
+    {
+      "year": 1906,
+      "count": 13
+    },
+    {
+      "year": 1907,
+      "count": 16
+    },
+    {
+      "year": 1908,
+      "count": 13
+    },
+    {
+      "year": 1909,
+      "count": 11
+    },
+    {
+      "year": 1910,
+      "count": 20
+    },
+    {
+      "year": 1911,
+      "count": 12
+    },
+    {
+      "year": 1912,
+      "count": 12
+    },
+    {
+      "year": 1913,
+      "count": 11
+    },
+    {
+      "year": 1914,
+      "count": 18
+    },
+    {
+      "year": 1915,
+      "count": 13
+    },
+    {
+      "year": 1916,
+      "count": 20
+    },
+    {
+      "year": 1917,
+      "count": 19
+    },
+    {
+      "year": 1918,
+      "count": 15
+    },
+    {
+      "year": 1919,
+      "count": 14
+    },
+    {
+      "year": 1920,
+      "count": 14
+    },
+    {
+      "year": 1921,
+      "count": 18
+    },
+    {
+      "year": 1922,
+      "count": 15
+    },
+    {
+      "year": 1923,
+      "count": 16
+    },
+    {
+      "year": 1924,
+      "count": 18
+    },
+    {
+      "year": 1925,
+      "count": 18
+    },
+    {
+      "year": 1926,
+      "count": 13
+    },
+    {
+      "year": 1927,
+      "count": 16
+    },
+    {
+      "year": 1928,
+      "count": 16
+    },
+    {
+      "year": 1929,
+      "count": 15
+    },
+    {
+      "year": 1930,
+      "count": 20
+    },
+    {
+      "year": 1931,
+      "count": 22
+    },
+    {
+      "year": 1932,
+      "count": 25
+    },
+    {
+      "year": 1933,
+      "count": 30
+    },
+    {
+      "year": 1934,
+      "count": 27
+    },
+    {
+      "year": 1935,
+      "count": 19
+    },
+    {
+      "year": 1936,
+      "count": 35
+    },
+    {
+      "year": 1937,
+      "count": 54
+    },
+    {
+      "year": 1938,
+      "count": 45
+    },
+    {
+      "year": 1939,
+      "count": 32
+    },
+    {
+      "year": 1940,
+      "count": 37
+    },
+    {
+      "year": 1941,
+      "count": 23
+    },
+    {
+      "year": 1942,
+      "count": 20
+    },
+    {
+      "year": 1943,
+      "count": 10
+    },
+    {
+      "year": 1944,
+      "count": 20
+    },
+    {
+      "year": 1945,
+      "count": 11
+    },
+    {
+      "year": 1946,
+      "count": 13
+    },
+    {
+      "year": 1947,
+      "count": 19
+    },
+    {
+      "year": 1948,
+      "count": 20
+    },
+    {
+      "year": 1949,
+      "count": 23
+    },
+    {
+      "year": 1950,
+      "count": 40
+    },
+    {
+      "year": 1951,
+      "count": 20
+    },
+    {
+      "year": 1952,
+      "count": 18
+    },
+    {
+      "year": 1953,
+      "count": 9
+    },
+    {
+      "year": 1954,
+      "count": 22
+    },
+    {
+      "year": 1955,
+      "count": 24
+    },
+    {
+      "year": 1956,
+      "count": 27
+    },
+    {
+      "year": 1957,
+      "count": 18
+    },
+    {
+      "year": 1958,
+      "count": 18
+    },
+    {
+      "year": 1959,
+      "count": 16
+    },
+    {
+      "year": 1960,
+      "count": 30
+    },
+    {
+      "year": 1961,
+      "count": 27
+    },
+    {
+      "year": 1962,
+      "count": 36
+    },
+    {
+      "year": 1963,
+      "count": 34
+    },
+    {
+      "year": 1964,
+      "count": 33
+    },
+    {
+      "year": 1965,
+      "count": 50
+    },
+    {
+      "year": 1966,
+      "count": 26
+    },
+    {
+      "year": 1967,
+      "count": 37
+    },
+    {
+      "year": 1968,
+      "count": 54
+    },
+    {
+      "year": 1969,
+      "count": 70
+    },
+    {
+      "year": 1970,
+      "count": 48
+    },
+    {
+      "year": 1971,
+      "count": 49
+    },
+    {
+      "year": 1972,
+      "count": 32
+    },
+    {
+      "year": 1973,
+      "count": 31
+    },
+    {
+      "year": 1974,
+      "count": 691
+    },
+    {
+      "year": 1975,
+      "count": 337
+    },
+    {
+      "year": 1976,
+      "count": 52
+    },
+    {
+      "year": 1977,
+      "count": 421
+    },
+    {
+      "year": 1978,
+      "count": 262
+    },
+    {
+      "year": 1979,
+      "count": 3046
+    },
+    {
+      "year": 1980,
+      "count": 152
+    },
+    {
+      "year": 1981,
+      "count": 463
+    },
+    {
+      "year": 1982,
+      "count": 344
+    },
+    {
+      "year": 1983,
+      "count": 360
+    },
+    {
+      "year": 1984,
+      "count": 402
+    },
+    {
+      "year": 1985,
+      "count": 378
+    },
+    {
+      "year": 1986,
+      "count": 1375
+    },
+    {
+      "year": 1987,
+      "count": 916
+    },
+    {
+      "year": 1988,
+      "count": 2296
+    },
+    {
+      "year": 1989,
+      "count": 136
+    },
+    {
+      "year": 1990,
+      "count": 1518
+    },
+    {
+      "year": 1991,
+      "count": 877
+    },
+    {
+      "year": 1992,
+      "count": 372
+    },
+    {
+      "year": 1993,
+      "count": 979
+    },
+    {
+      "year": 1994,
+      "count": 719
+    },
+    {
+      "year": 1995,
+      "count": 487
+    },
+    {
+      "year": 1996,
+      "count": 583
+    },
+    {
+      "year": 1997,
+      "count": 1696
+    },
+    {
+      "year": 1998,
+      "count": 2697
+    },
+    {
+      "year": 1999,
+      "count": 1691
+    },
+    {
+      "year": 2000,
+      "count": 1792
+    },
+    {
+      "year": 2001,
+      "count": 1650
+    },
+    {
+      "year": 2002,
+      "count": 2078
+    },
+    {
+      "year": 2003,
+      "count": 3323
+    },
+    {
+      "year": 2004,
+      "count": 1940
+    },
+    {
+      "year": 2005,
+      "count": 875
+    },
+    {
+      "year": 2006,
+      "count": 2456
+    },
+    {
+      "year": 2007,
+      "count": 1189
+    },
+    {
+      "year": 2008,
+      "count": 957
+    },
+    {
+      "year": 2009,
+      "count": 1497
+    },
+    {
+      "year": 2010,
+      "count": 1005
+    },
+    {
+      "year": 2011,
+      "count": 713
+    },
+    {
+      "year": 2012,
+      "count": 234
+    },
+    {
+      "year": 2013,
+      "count": 11
+    }
+  ],
+  "year_condition_counts": [
+    {
+      "year": 860,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 920,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1399,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1490,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1491,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1495,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1519,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1575,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1583,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1600,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1621,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1623,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1628,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1632,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1636,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1637,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1647,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1654,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1662,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1668,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1671,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1688,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1704,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1715,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1716,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1723,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1724,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1740,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1741,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1749,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1750,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1751,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1753,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1766,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1768,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1769,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1773,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1775,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1776,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1779,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1781,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1784,
+      "fall": "Found",
+      "count": 2
+    },
+    {
+      "year": 1785,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1787,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1790,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1791,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1792,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1793,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1794,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1795,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1796,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1797,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1798,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1801,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1803,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1804,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1804,
+      "fall": "Found",
+      "count": 3
+    },
+    {
+      "year": 1805,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1805,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1806,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1807,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1808,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1808,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1809,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1810,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1810,
+      "fall": "Found",
+      "count": 2
+    },
+    {
+      "year": 1811,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1812,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1813,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1814,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1814,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1815,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1817,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1818,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1818,
+      "fall": "Found",
+      "count": 2
+    },
+    {
+      "year": 1819,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1819,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1820,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1821,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1822,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1822,
+      "fall": "Found",
+      "count": 2
+    },
+    {
+      "year": 1823,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1824,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1825,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1825,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1826,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1827,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1828,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1828,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1829,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1829,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1830,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1831,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1832,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1833,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1834,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1834,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1835,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1836,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1836,
+      "fall": "Found",
+      "count": 2
+    },
+    {
+      "year": 1837,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1837,
+      "fall": "Found",
+      "count": 2
+    },
+    {
+      "year": 1838,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1838,
+      "fall": "Found",
+      "count": 2
+    },
+    {
+      "year": 1839,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1839,
+      "fall": "Found",
+      "count": 4
+    },
+    {
+      "year": 1840,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1840,
+      "fall": "Found",
+      "count": 4
+    },
+    {
+      "year": 1841,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1841,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1842,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1842,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1843,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1843,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1844,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1844,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1845,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1845,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1846,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1846,
+      "fall": "Found",
+      "count": 4
+    },
+    {
+      "year": 1847,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1847,
+      "fall": "Found",
+      "count": 3
+    },
+    {
+      "year": 1848,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1849,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1849,
+      "fall": "Found",
+      "count": 2
+    },
+    {
+      "year": 1850,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1850,
+      "fall": "Found",
+      "count": 6
+    },
+    {
+      "year": 1851,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1852,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1852,
+      "fall": "Found",
+      "count": 4
+    },
+    {
+      "year": 1853,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1853,
+      "fall": "Found",
+      "count": 2
+    },
+    {
+      "year": 1854,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1854,
+      "fall": "Found",
+      "count": 8
+    },
+    {
+      "year": 1855,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1855,
+      "fall": "Found",
+      "count": 3
+    },
+    {
+      "year": 1856,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1856,
+      "fall": "Found",
+      "count": 4
+    },
+    {
+      "year": 1857,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1857,
+      "fall": "Found",
+      "count": 3
+    },
+    {
+      "year": 1858,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1858,
+      "fall": "Found",
+      "count": 4
+    },
+    {
+      "year": 1859,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1859,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1860,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1860,
+      "fall": "Found",
+      "count": 5
+    },
+    {
+      "year": 1861,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1861,
+      "fall": "Found",
+      "count": 2
+    },
+    {
+      "year": 1862,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1862,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1863,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1863,
+      "fall": "Found",
+      "count": 9
+    },
+    {
+      "year": 1864,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1864,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1865,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1865,
+      "fall": "Found",
+      "count": 1
+    },
+    {
+      "year": 1866,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1866,
+      "fall": "Found",
+      "count": 5
+    },
+    {
+      "year": 1867,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1867,
+      "fall": "Found",
+      "count": 5
+    },
+    {
+      "year": 1868,
+      "fall": "Fell",
+      "count": 11
+    },
+    {
+      "year": 1868,
+      "fall": "Found",
+      "count": 5
+    },
+    {
+      "year": 1869,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1869,
+      "fall": "Found",
+      "count": 5
+    },
+    {
+      "year": 1870,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1870,
+      "fall": "Found",
+      "count": 3
+    },
+    {
+      "year": 1871,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1871,
+      "fall": "Found",
+      "count": 3
+    },
+    {
+      "year": 1872,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1872,
+      "fall": "Found",
+      "count": 2
+    },
+    {
+      "year": 1873,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1873,
+      "fall": "Found",
+      "count": 5
+    },
+    {
+      "year": 1874,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1874,
+      "fall": "Found",
+      "count": 3
+    },
+    {
+      "year": 1875,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1875,
+      "fall": "Found",
+      "count": 7
+    },
+    {
+      "year": 1876,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1876,
+      "fall": "Found",
+      "count": 4
+    },
+    {
+      "year": 1877,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1877,
+      "fall": "Found",
+      "count": 2
+    },
+    {
+      "year": 1878,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1878,
+      "fall": "Found",
+      "count": 3
+    },
+    {
+      "year": 1879,
+      "fall": "Fell",
+      "count": 8
+    },
+    {
+      "year": 1879,
+      "fall": "Found",
+      "count": 6
+    },
+    {
+      "year": 1880,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1880,
+      "fall": "Found",
+      "count": 8
+    },
+    {
+      "year": 1881,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1881,
+      "fall": "Found",
+      "count": 6
+    },
+    {
+      "year": 1882,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1882,
+      "fall": "Found",
+      "count": 5
+    },
+    {
+      "year": 1883,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1883,
+      "fall": "Found",
+      "count": 7
+    },
+    {
+      "year": 1884,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1884,
+      "fall": "Found",
+      "count": 8
+    },
+    {
+      "year": 1885,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1885,
+      "fall": "Found",
+      "count": 5
+    },
+    {
+      "year": 1886,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1886,
+      "fall": "Found",
+      "count": 3
+    },
+    {
+      "year": 1887,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1887,
+      "fall": "Found",
+      "count": 16
+    },
+    {
+      "year": 1888,
+      "fall": "Found",
+      "count": 15
+    },
+    {
+      "year": 1889,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1889,
+      "fall": "Found",
+      "count": 10
+    },
+    {
+      "year": 1890,
+      "fall": "Fell",
+      "count": 9
+    },
+    {
+      "year": 1890,
+      "fall": "Found",
+      "count": 11
+    },
+    {
+      "year": 1891,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1891,
+      "fall": "Found",
+      "count": 8
+    },
+    {
+      "year": 1892,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1892,
+      "fall": "Found",
+      "count": 7
+    },
+    {
+      "year": 1893,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1893,
+      "fall": "Found",
+      "count": 8
+    },
+    {
+      "year": 1894,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1894,
+      "fall": "Found",
+      "count": 6
+    },
+    {
+      "year": 1895,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1895,
+      "fall": "Found",
+      "count": 6
+    },
+    {
+      "year": 1896,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1896,
+      "fall": "Found",
+      "count": 6
+    },
+    {
+      "year": 1897,
+      "fall": "Fell",
+      "count": 8
+    },
+    {
+      "year": 1897,
+      "fall": "Found",
+      "count": 4
+    },
+    {
+      "year": 1898,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1898,
+      "fall": "Found",
+      "count": 12
+    },
+    {
+      "year": 1899,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1899,
+      "fall": "Found",
+      "count": 7
+    },
+    {
+      "year": 1900,
+      "fall": "Fell",
+      "count": 8
+    },
+    {
+      "year": 1900,
+      "fall": "Found",
+      "count": 9
+    },
+    {
+      "year": 1901,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1901,
+      "fall": "Found",
+      "count": 5
+    },
+    {
+      "year": 1902,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1902,
+      "fall": "Found",
+      "count": 5
+    },
+    {
+      "year": 1903,
+      "fall": "Fell",
+      "count": 8
+    },
+    {
+      "year": 1903,
+      "fall": "Found",
+      "count": 14
+    },
+    {
+      "year": 1904,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1904,
+      "fall": "Found",
+      "count": 7
+    },
+    {
+      "year": 1905,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1905,
+      "fall": "Found",
+      "count": 9
+    },
+    {
+      "year": 1906,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1906,
+      "fall": "Found",
+      "count": 6
+    },
+    {
+      "year": 1907,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1907,
+      "fall": "Found",
+      "count": 12
+    },
+    {
+      "year": 1908,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1908,
+      "fall": "Found",
+      "count": 7
+    },
+    {
+      "year": 1909,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1909,
+      "fall": "Found",
+      "count": 9
+    },
+    {
+      "year": 1910,
+      "fall": "Fell",
+      "count": 11
+    },
+    {
+      "year": 1910,
+      "fall": "Found",
+      "count": 9
+    },
+    {
+      "year": 1911,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1911,
+      "fall": "Found",
+      "count": 7
+    },
+    {
+      "year": 1912,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1912,
+      "fall": "Found",
+      "count": 8
+    },
+    {
+      "year": 1913,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1913,
+      "fall": "Found",
+      "count": 7
+    },
+    {
+      "year": 1914,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1914,
+      "fall": "Found",
+      "count": 11
+    },
+    {
+      "year": 1915,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1915,
+      "fall": "Found",
+      "count": 11
+    },
+    {
+      "year": 1916,
+      "fall": "Fell",
+      "count": 10
+    },
+    {
+      "year": 1916,
+      "fall": "Found",
+      "count": 10
+    },
+    {
+      "year": 1917,
+      "fall": "Fell",
+      "count": 10
+    },
+    {
+      "year": 1917,
+      "fall": "Found",
+      "count": 9
+    },
+    {
+      "year": 1918,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1918,
+      "fall": "Found",
+      "count": 9
+    },
+    {
+      "year": 1919,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1919,
+      "fall": "Found",
+      "count": 7
+    },
+    {
+      "year": 1920,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1920,
+      "fall": "Found",
+      "count": 9
+    },
+    {
+      "year": 1921,
+      "fall": "Fell",
+      "count": 8
+    },
+    {
+      "year": 1921,
+      "fall": "Found",
+      "count": 10
+    },
+    {
+      "year": 1922,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1922,
+      "fall": "Found",
+      "count": 9
+    },
+    {
+      "year": 1923,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1923,
+      "fall": "Found",
+      "count": 10
+    },
+    {
+      "year": 1924,
+      "fall": "Fell",
+      "count": 10
+    },
+    {
+      "year": 1924,
+      "fall": "Found",
+      "count": 8
+    },
+    {
+      "year": 1925,
+      "fall": "Fell",
+      "count": 9
+    },
+    {
+      "year": 1925,
+      "fall": "Found",
+      "count": 9
+    },
+    {
+      "year": 1926,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1926,
+      "fall": "Found",
+      "count": 6
+    },
+    {
+      "year": 1927,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1927,
+      "fall": "Found",
+      "count": 10
+    },
+    {
+      "year": 1928,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1928,
+      "fall": "Found",
+      "count": 10
+    },
+    {
+      "year": 1929,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1929,
+      "fall": "Found",
+      "count": 8
+    },
+    {
+      "year": 1930,
+      "fall": "Fell",
+      "count": 11
+    },
+    {
+      "year": 1930,
+      "fall": "Found",
+      "count": 9
+    },
+    {
+      "year": 1931,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1931,
+      "fall": "Found",
+      "count": 16
+    },
+    {
+      "year": 1932,
+      "fall": "Fell",
+      "count": 8
+    },
+    {
+      "year": 1932,
+      "fall": "Found",
+      "count": 17
+    },
+    {
+      "year": 1933,
+      "fall": "Fell",
+      "count": 17
+    },
+    {
+      "year": 1933,
+      "fall": "Found",
+      "count": 13
+    },
+    {
+      "year": 1934,
+      "fall": "Fell",
+      "count": 10
+    },
+    {
+      "year": 1934,
+      "fall": "Found",
+      "count": 17
+    },
+    {
+      "year": 1935,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1935,
+      "fall": "Found",
+      "count": 13
+    },
+    {
+      "year": 1936,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1936,
+      "fall": "Found",
+      "count": 30
+    },
+    {
+      "year": 1937,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1937,
+      "fall": "Found",
+      "count": 47
+    },
+    {
+      "year": 1938,
+      "fall": "Fell",
+      "count": 11
+    },
+    {
+      "year": 1938,
+      "fall": "Found",
+      "count": 34
+    },
+    {
+      "year": 1939,
+      "fall": "Fell",
+      "count": 10
+    },
+    {
+      "year": 1939,
+      "fall": "Found",
+      "count": 22
+    },
+    {
+      "year": 1940,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1940,
+      "fall": "Found",
+      "count": 32
+    },
+    {
+      "year": 1941,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1941,
+      "fall": "Found",
+      "count": 19
+    },
+    {
+      "year": 1942,
+      "fall": "Fell",
+      "count": 8
+    },
+    {
+      "year": 1942,
+      "fall": "Found",
+      "count": 12
+    },
+    {
+      "year": 1943,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1943,
+      "fall": "Found",
+      "count": 7
+    },
+    {
+      "year": 1944,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1944,
+      "fall": "Found",
+      "count": 13
+    },
+    {
+      "year": 1945,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1945,
+      "fall": "Found",
+      "count": 7
+    },
+    {
+      "year": 1946,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1946,
+      "fall": "Found",
+      "count": 8
+    },
+    {
+      "year": 1947,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1947,
+      "fall": "Found",
+      "count": 13
+    },
+    {
+      "year": 1948,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1948,
+      "fall": "Found",
+      "count": 17
+    },
+    {
+      "year": 1949,
+      "fall": "Fell",
+      "count": 13
+    },
+    {
+      "year": 1949,
+      "fall": "Found",
+      "count": 10
+    },
+    {
+      "year": 1950,
+      "fall": "Fell",
+      "count": 12
+    },
+    {
+      "year": 1950,
+      "fall": "Found",
+      "count": 28
+    },
+    {
+      "year": 1951,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1951,
+      "fall": "Found",
+      "count": 13
+    },
+    {
+      "year": 1952,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1952,
+      "fall": "Found",
+      "count": 12
+    },
+    {
+      "year": 1953,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1953,
+      "fall": "Found",
+      "count": 6
+    },
+    {
+      "year": 1954,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1954,
+      "fall": "Found",
+      "count": 16
+    },
+    {
+      "year": 1955,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1955,
+      "fall": "Found",
+      "count": 20
+    },
+    {
+      "year": 1956,
+      "fall": "Fell",
+      "count": 8
+    },
+    {
+      "year": 1956,
+      "fall": "Found",
+      "count": 19
+    },
+    {
+      "year": 1957,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1957,
+      "fall": "Found",
+      "count": 12
+    },
+    {
+      "year": 1958,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1958,
+      "fall": "Found",
+      "count": 16
+    },
+    {
+      "year": 1959,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1959,
+      "fall": "Found",
+      "count": 10
+    },
+    {
+      "year": 1960,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1960,
+      "fall": "Found",
+      "count": 25
+    },
+    {
+      "year": 1961,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1961,
+      "fall": "Found",
+      "count": 20
+    },
+    {
+      "year": 1962,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1962,
+      "fall": "Found",
+      "count": 29
+    },
+    {
+      "year": 1963,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1963,
+      "fall": "Found",
+      "count": 27
+    },
+    {
+      "year": 1964,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1964,
+      "fall": "Found",
+      "count": 26
+    },
+    {
+      "year": 1965,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1965,
+      "fall": "Found",
+      "count": 46
+    },
+    {
+      "year": 1966,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1966,
+      "fall": "Found",
+      "count": 21
+    },
+    {
+      "year": 1967,
+      "fall": "Fell",
+      "count": 9
+    },
+    {
+      "year": 1967,
+      "fall": "Found",
+      "count": 28
+    },
+    {
+      "year": 1968,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1968,
+      "fall": "Found",
+      "count": 49
+    },
+    {
+      "year": 1969,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1969,
+      "fall": "Found",
+      "count": 64
+    },
+    {
+      "year": 1970,
+      "fall": "Fell",
+      "count": 8
+    },
+    {
+      "year": 1970,
+      "fall": "Found",
+      "count": 40
+    },
+    {
+      "year": 1971,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1971,
+      "fall": "Found",
+      "count": 42
+    },
+    {
+      "year": 1972,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1972,
+      "fall": "Found",
+      "count": 29
+    },
+    {
+      "year": 1973,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1973,
+      "fall": "Found",
+      "count": 27
+    },
+    {
+      "year": 1974,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1974,
+      "fall": "Found",
+      "count": 684
+    },
+    {
+      "year": 1975,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1975,
+      "fall": "Found",
+      "count": 333
+    },
+    {
+      "year": 1976,
+      "fall": "Fell",
+      "count": 12
+    },
+    {
+      "year": 1976,
+      "fall": "Found",
+      "count": 40
+    },
+    {
+      "year": 1977,
+      "fall": "Fell",
+      "count": 10
+    },
+    {
+      "year": 1977,
+      "fall": "Found",
+      "count": 411
+    },
+    {
+      "year": 1978,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1978,
+      "fall": "Found",
+      "count": 259
+    },
+    {
+      "year": 1979,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1979,
+      "fall": "Found",
+      "count": 3044
+    },
+    {
+      "year": 1980,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1980,
+      "fall": "Found",
+      "count": 146
+    },
+    {
+      "year": 1981,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1981,
+      "fall": "Found",
+      "count": 456
+    },
+    {
+      "year": 1982,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1982,
+      "fall": "Found",
+      "count": 341
+    },
+    {
+      "year": 1983,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1983,
+      "fall": "Found",
+      "count": 355
+    },
+    {
+      "year": 1984,
+      "fall": "Fell",
+      "count": 10
+    },
+    {
+      "year": 1984,
+      "fall": "Found",
+      "count": 392
+    },
+    {
+      "year": 1985,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 1985,
+      "fall": "Found",
+      "count": 376
+    },
+    {
+      "year": 1986,
+      "fall": "Fell",
+      "count": 9
+    },
+    {
+      "year": 1986,
+      "fall": "Found",
+      "count": 1366
+    },
+    {
+      "year": 1987,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 1987,
+      "fall": "Found",
+      "count": 915
+    },
+    {
+      "year": 1988,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1988,
+      "fall": "Found",
+      "count": 2290
+    },
+    {
+      "year": 1989,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1989,
+      "fall": "Found",
+      "count": 129
+    },
+    {
+      "year": 1990,
+      "fall": "Fell",
+      "count": 8
+    },
+    {
+      "year": 1990,
+      "fall": "Found",
+      "count": 1510
+    },
+    {
+      "year": 1991,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1991,
+      "fall": "Found",
+      "count": 872
+    },
+    {
+      "year": 1992,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1992,
+      "fall": "Found",
+      "count": 369
+    },
+    {
+      "year": 1993,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 1993,
+      "fall": "Found",
+      "count": 975
+    },
+    {
+      "year": 1994,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1994,
+      "fall": "Found",
+      "count": 713
+    },
+    {
+      "year": 1995,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 1995,
+      "fall": "Found",
+      "count": 481
+    },
+    {
+      "year": 1996,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 1996,
+      "fall": "Found",
+      "count": 578
+    },
+    {
+      "year": 1997,
+      "fall": "Fell",
+      "count": 3
+    },
+    {
+      "year": 1997,
+      "fall": "Found",
+      "count": 1693
+    },
+    {
+      "year": 1998,
+      "fall": "Fell",
+      "count": 9
+    },
+    {
+      "year": 1998,
+      "fall": "Found",
+      "count": 2688
+    },
+    {
+      "year": 1999,
+      "fall": "Fell",
+      "count": 7
+    },
+    {
+      "year": 1999,
+      "fall": "Found",
+      "count": 1684
+    },
+    {
+      "year": 2000,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 2000,
+      "fall": "Found",
+      "count": 1788
+    },
+    {
+      "year": 2001,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 2001,
+      "fall": "Found",
+      "count": 1645
+    },
+    {
+      "year": 2002,
+      "fall": "Fell",
+      "count": 8
+    },
+    {
+      "year": 2002,
+      "fall": "Found",
+      "count": 2070
+    },
+    {
+      "year": 2003,
+      "fall": "Fell",
+      "count": 9
+    },
+    {
+      "year": 2003,
+      "fall": "Found",
+      "count": 3314
+    },
+    {
+      "year": 2004,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 2004,
+      "fall": "Found",
+      "count": 1934
+    },
+    {
+      "year": 2005,
+      "fall": "Found",
+      "count": 875
+    },
+    {
+      "year": 2006,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 2006,
+      "fall": "Found",
+      "count": 2451
+    },
+    {
+      "year": 2007,
+      "fall": "Fell",
+      "count": 8
+    },
+    {
+      "year": 2007,
+      "fall": "Found",
+      "count": 1181
+    },
+    {
+      "year": 2008,
+      "fall": "Fell",
+      "count": 9
+    },
+    {
+      "year": 2008,
+      "fall": "Found",
+      "count": 948
+    },
+    {
+      "year": 2009,
+      "fall": "Fell",
+      "count": 5
+    },
+    {
+      "year": 2009,
+      "fall": "Found",
+      "count": 1492
+    },
+    {
+      "year": 2010,
+      "fall": "Fell",
+      "count": 6
+    },
+    {
+      "year": 2010,
+      "fall": "Found",
+      "count": 999
+    },
+    {
+      "year": 2011,
+      "fall": "Fell",
+      "count": 4
+    },
+    {
+      "year": 2011,
+      "fall": "Found",
+      "count": 709
+    },
+    {
+      "year": 2012,
+      "fall": "Fell",
+      "count": 2
+    },
+    {
+      "year": 2012,
+      "fall": "Found",
+      "count": 232
+    },
+    {
+      "year": 2013,
+      "fall": "Fell",
+      "count": 1
+    },
+    {
+      "year": 2013,
+      "fall": "Found",
+      "count": 10
+    }
+  ],
+  "largest": [
+    {
+      "name": "Hoba",
+      "id": "11890",
+      "nametype": "Valid",
+      "recclass": "Iron, IVB",
+      "mass_g": 60000000.0,
+      "fall": "Found",
+      "year": 1920,
+      "lat": -19.58333,
+      "lon": 17.91667,
+      "map_valid": true,
+      "year_valid": true,
+      "mass_positive": true,
+      "mass_nonnegative": true,
+      "coordinate_issue": "",
+      "year_issue": ""
+    },
+    {
+      "name": "Cape York",
+      "id": "5262",
+      "nametype": "Valid",
+      "recclass": "Iron, IIIAB",
+      "mass_g": 58200000.0,
+      "fall": "Found",
+      "year": 1818,
+      "lat": 76.13333,
+      "lon": -64.93333,
+      "map_valid": true,
+      "year_valid": true,
+      "mass_positive": true,
+      "mass_nonnegative": true,
+      "coordinate_issue": "",
+      "year_issue": ""
+    },
+    {
+      "name": "Campo del Cielo",
+      "id": "5247",
+      "nametype": "Valid",
+      "recclass": "Iron, IAB-MG",
+      "mass_g": 50000000.0,
+      "fall": "Found",
+      "year": 1575,
+      "lat": -27.46667,
+      "lon": -60.58333,
+      "map_valid": true,
+      "year_valid": true,
+      "mass_positive": true,
+      "mass_nonnegative": true,
+      "coordinate_issue": "",
+      "year_issue": ""
+    },
+    {
+      "name": "Canyon Diablo",
+      "id": "5257",
+      "nametype": "Valid",
+      "recclass": "Iron, IAB-MG",
+      "mass_g": 30000000.0,
+      "fall": "Found",
+      "year": 1891,
+      "lat": 35.05,
+      "lon": -111.03333,
+      "map_valid": true,
+      "year_valid": true,
+      "mass_positive": true,
+      "mass_nonnegative": true,
+      "coordinate_issue": "",
+      "year_issue": ""
+    },
+    {
+      "name": "Armanty",
+      "id": "2335",
+      "nametype": "Valid",
+      "recclass": "Iron, IIIE",
+      "mass_g": 28000000.0,
+      "fall": "Found",
+      "year": 1898,
+      "lat": 47.0,
+      "lon": 88.0,
+      "map_valid": true,
+      "year_valid": true,
+      "mass_positive": true,
+      "mass_nonnegative": true,
+      "coordinate_issue": "",
+      "year_issue": ""
+    }
+  ],
+  "anomalous_year_rows": [
+    {
+      "name": "Northwest Africa 7701",
+      "id": "57150",
+      "nametype": "Valid",
+      "recclass": "CK6",
+      "mass_g": 55.0,
+      "fall": "Found",
+      "year": 2101,
+      "lat": 0.0,
+      "lon": 0.0,
+      "map_valid": false,
+      "year_valid": false,
+      "mass_positive": true,
+      "mass_nonnegative": true,
+      "coordinate_issue": "Par 0,0 sin ubicación confiable",
+      "year_issue": "Año fuera del período posible"
+    }
+  ],
+  "out_of_range_coordinate_rows": [
+    {
+      "name": "Meridiani Planum",
+      "id": "32789",
+      "nametype": "Valid",
+      "recclass": "Iron, IAB complex",
+      "mass_g": null,
+      "fall": "Found",
+      "year": 2005,
+      "lat": -1.94617,
+      "lon": 354.47333,
+      "map_valid": false,
+      "year_valid": true,
+      "mass_positive": false,
+      "mass_nonnegative": false,
+      "coordinate_issue": "Coordenadas fuera de rango",
+      "year_issue": ""
+    }
+  ]
+}

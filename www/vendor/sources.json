@@ -1,0 +1,8 @@
+{
+  "leaflet.js": "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js",
+  "leaflet.css": "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css",
+  "leaflet-LICENSE.txt": "https://unpkg.com/leaflet@1.9.4/LICENSE",
+  "plotly-locale-es.js": "https://cdn.plot.ly/plotly-locale-es-latest.js",
+  "space-grotesk.woff2": "https://unpkg.com/@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2",
+  "space-grotesk-LICENSE.txt": "https://unpkg.com/@fontsource-variable/space-grotesk/LICENSE"
+}

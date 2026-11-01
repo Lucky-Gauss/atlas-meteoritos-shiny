@@ -27,4 +27,4 @@ La cámara de Plotly se accionó, pero no se confirmó el archivo PNG descargado
 
 Las 18 pruebas automáticas adicionales sobre datos reales se detallan en `pruebas_datos.md`.
 
-La revisión de la versión pública se documentará por separado en `publicacion.md` cuando finalice su despliegue.
+La revisión adicional de la versión pública se documenta por separado en `publicacion.md`. El enlace público, la búsqueda, el estado vacío y el restablecimiento se comprobaron el 1 de noviembre de 2026.

@@ -1,0 +1,68 @@
+{
+  "title": "Meteorite Landings",
+  "original_creator": "The Meteoritical Society",
+  "publisher": "NASA Open Data Portal",
+  "dataset_identifier": "gh4g-9sfh",
+  "landing_page": "https://data.nasa.gov/dataset/meteorite-landings",
+  "catalog_verification_url": "https://catalog.data.gov/dataset/meteorite-landings",
+  "file_url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv",
+  "download_request_url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv?download=20261031",
+  "download_date": "2026-10-31",
+  "download_timezone": "America/Costa_Rica",
+  "source_type": "CSV oficial alojado por NASA, sin espejo",
+  "raw_file": "data/raw/Meteorite_Landings.csv",
+  "raw_bytes": 3952161,
+  "sha256": "5b4c6a3596f177b3fe8b722e8a7e5f98f05628fe2167ec3bd007acdeb77036b5",
+  "rows": 45716,
+  "columns": 10,
+  "original_column_names": [
+    "name",
+    "id",
+    "nametype",
+    "recclass",
+    "mass (g)",
+    "fall",
+    "year",
+    "reclat",
+    "reclong",
+    "GeoLocation"
+  ],
+  "license": "La ficha de NASA consultada indica License not specified. El acceso es público, pero no se presume una licencia abierta específica.",
+  "license_url": "https://data.nasa.gov/dataset/meteorite-landings",
+  "reuse_note": "Conservar la atribución a The Meteoritical Society y NASA. Revisar las condiciones de uso antes de redistribuir o publicar el proyecto.",
+  "historical_snapshot": "Es una copia histórica. Los años plausibles contenidos van de 860 a 2013. La fecha de actualización del catálogo no equivale a actualización de las observaciones.",
+  "year_definition": "Año de la caída observada para Fell o del hallazgo para Found. Para Found no es una fecha de impacto.",
+  "year_definition_reference": "https://www.kaggle.com/datasets/nasa/meteorite-landings",
+  "legacy_note": "El catálogo conserva descripciones de una versión antigua de 34 513 meteoritos. Las dimensiones informadas aquí se calcularon sobre el CSV descargado.",
+  "preparation": "scripts/prepare_data.py",
+  "year_cutoff": 2026,
+  "dictionary": {
+    "file": "data/raw/MD_columns.json",
+    "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/MD_columns.json",
+    "download_request_url": "https://data.nasa.gov/docs/legacy/meteorite_landings/MD_columns.json?download=20261031",
+    "sha256": "e12b8e2765a0996a8d44306bf78754893795eadfb918b51b822f37262ee52017",
+    "note": "Metadatos originales de Socrata. Incluyen campos computados adicionales que no aparecen en el CSV descargado."
+  },
+  "cartography": {
+    "title": "Natural Earth Admin 0 Countries",
+    "version": "5.1.2",
+    "scale": "1:110 millones",
+    "file": "www/vendor/world.geojson",
+    "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_110m_admin_0_countries.geojson",
+    "license": "Dominio público",
+    "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "download_date": "2026-10-31",
+    "sha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f",
+    "use": "Fondo de orientación, sin asignación de países a los registros"
+  },
+  "extraterrestrial_record": {
+    "id": "32789",
+    "name": "Meridiani Planum",
+    "planet": "Marte",
+    "note": "Conservado en el catálogo. No se representa en el mapa terrestre ni se normaliza su longitud.",
+    "references": [
+      "https://www.lpi.usra.edu/meteor/metbull.php?code=32789",
+      "https://ntrs.nasa.gov/citations/20100003417"
+    ]
+  }
+}
