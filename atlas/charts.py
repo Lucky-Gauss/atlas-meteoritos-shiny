@@ -19,11 +19,11 @@ import pandas as pd
 import plotly.graph_objects as go
 
 
-BG = "#0b1425"
-TEXT = "#e7edf7"
-MUTED = "#9fb0c8"
-GRID = "#223148"
-COLORS = {"Found": "#55ddcf", "Fell": "#ffbc75"}
+BG = "#fffaf0"
+TEXT = "#302747"
+MUTED = "#655971"
+GRID = "#e7dfe7"
+COLORS = {"Found": "#157f73", "Fell": "#c45a36"}
 LABELS = {"Found": "Hallazgo", "Fell": "Caída observada"}
 
 
@@ -41,14 +41,14 @@ def _fmt(value: float, digits: int = 2) -> str:
 def _base(height: int = 360) -> go.Figure:
     fig = go.Figure()
     fig.update_layout(
-        template="plotly_dark",
+        template="plotly_white",
         paper_bgcolor=BG,
         plot_bgcolor=BG,
         font=dict(family="Inter, Segoe UI, sans-serif", size=12, color=TEXT),
         colorway=list(COLORS.values()),
         height=height,
         margin=dict(l=62, r=22, t=40, b=56),
-        hoverlabel=dict(bgcolor="#15243a", bordercolor="#47617e", font_color=TEXT, font_size=13),
+        hoverlabel=dict(bgcolor="#fff3d8", bordercolor="#ad8fbd", font_color=TEXT, font_size=13),
         legend=dict(
             orientation="h",
             x=0,
@@ -203,7 +203,7 @@ def timeline(df: pd.DataFrame, period: str = "decade") -> go.Figure:
         title="Año consignado" if step == 1 else "Década del año consignado",
         tickformat="d",
         range=[lower - step / 2, upper + step / 2],
-        rangeslider=dict(visible=True, thickness=0.14, bgcolor="#111f34", bordercolor=GRID, borderwidth=1),
+        rangeslider=dict(visible=True, thickness=0.14, bgcolor="#eee2f0", bordercolor=GRID, borderwidth=1),
     )
     fig.update_yaxes(title="Número de registros", rangemode="tozero", tickformat="~s", fixedrange=False)
     fig.update_layout(hovermode="x unified", meta={"eligible": len(subset), "excluded": len(df) - len(subset), "period": "year" if step == 1 else "decade"})
@@ -273,7 +273,7 @@ def mass_boxes(df: pd.DataFrame, group: str = "fall", top_n: int = 8) -> go.Figu
         lower, upper = float(inner.min()), float(inner.max())
         outliers = int(np.sum((values < lower) | (values > upper)))
         label = str(category) if by_class else LABELS[category]
-        color = "#b4a2fb" if by_class else COLORS[category]
+        color = "#77539c" if by_class else COLORS[category]
         summary = (
             f"<b>{escape(label)}</b><br>"
             f"Registros con masa positiva: {_fmt(len(values))}<br>"
@@ -292,7 +292,7 @@ def mass_boxes(df: pd.DataFrame, group: str = "fall", top_n: int = 8) -> go.Figu
             upperfence=[upper],
             name=label,
             line=dict(color=color, width=2),
-            fillcolor="rgba(180,162,251,0.22)" if by_class else ("rgba(85,221,207,0.22)" if color == COLORS["Found"] else "rgba(255,188,117,0.22)"),
+            fillcolor="rgba(119,83,156,0.18)" if by_class else ("rgba(21,127,115,0.18)" if color == COLORS["Found"] else "rgba(196,90,54,0.18)"),
             width=0.48,
             boxpoints=False,
             showlegend=False,

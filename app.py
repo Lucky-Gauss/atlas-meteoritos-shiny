@@ -6,6 +6,7 @@ import plotly.graph_objects as go
 # La importación explícita permite que Shinylive detecte Plotly al exportar.
 from shiny import App, reactive, render, ui, req
 
+from atlas.illustrations import scene, chapter
 from atlas.filtering import select_records, export_frame
 from atlas.charts import mass_histogram, timeline, class_bars, mass_boxes
 
@@ -50,10 +51,11 @@ app_ui = ui.page_fluid(
         ui.tags.script(src='vendor/plotly.min.js', defer=True),
         ui.tags.script(src='vendor/plotly-locale-es.js', defer=True),
         ui.tags.script(src='atlas.js', defer=True),
+        ui.tags.script(src='museum.js', defer=True),
     ),
     ui.tags.a('Saltar al contenido', href='#main-content', class_='skip-link'),
     ui.tags.header(
-        ui.div(ui.span('✦', class_='brand-icon', **{'aria-hidden': 'true'}),
+        ui.div(scene('miga', 'brand-miga'),
                ui.div(ui.strong('ATLAS'), ui.span('DE METEORITOS')), class_='brand'),
         ui.tags.nav(
             *[ui.tags.button(label, type='button', class_='nav-item' + (' active' if i == 0 else ''),
@@ -61,13 +63,27 @@ app_ui = ui.page_fluid(
               for i, (page, label) in enumerate([('explorer', 'Explorar'), ('analysis', 'Análisis'),
                                                 ('catalogue', 'Catálogo'), ('about', 'Los datos')])],
             **{'aria-label': 'Navegación principal'}),
-        ui.div(ui.span(class_='status-dot'), 'BORRADOR LOCAL', class_='local-badge'),
+        ui.div(ui.tags.button('Pausar movimiento', id='motion-toggle', type='button', **{'aria-pressed': 'false'}), ui.tags.button('Filtros', id='filter-toggle', type='button', **{'aria-expanded': 'false', 'aria-controls': 'exploration-filters'}), class_='header-actions'),
         class_='topbar',
     ),
+    ui.tags.section(
+        ui.div(ui.div('UNA EXPEDICIÓN POR EL CATÁLOGO DE NASA', class_='eyebrow'),
+               ui.h1('El espacio también', ui.br(), ui.span('deja huellas.')),
+               ui.p('45 716 historias que llegaron desde el espacio.', class_='hero-lead'),
+               ui.p('De una pequeña roca a una gran pregunta. Explorá dónde se encontraron, cuánto pesan y qué podemos aprender de los meteoritos registrados.', class_='hero-description'),
+               ui.tags.button('Comenzar la exploración', id='begin-expedition', type='button', class_='primary-cta'),
+               ui.div('DATOS REALES', ui.span(' / '), 'CURIOSIDAD INFINITA', class_='hero-caption'), class_='hero-copy'),
+        scene('arrival', 'arrival-art'),
+        ui.div('01 — DEL ESPACIO A LA EVIDENCIA', class_='scene-coordinate'),
+        class_='expedition-hero', id='portada'),
+    ui.div(ui.p('Una roca. Muchas preguntas.'), ui.span('Geografía'), ui.span('Masa'), ui.span('Tiempo'), ui.span('Evidencia'), class_='journey-ribbon'),
+    ui.tags.button('Cerrar filtros', id='filter-backdrop', type='button', tabindex='-1', **{'aria-label': 'Cerrar filtros'}),
     ui.div(
         ui.tags.aside(
+            ui.tags.button('Cerrar ×', id='filter-close', type='button'),
+            scene('miga', 'filter-miga'),
             ui.tags.details(
-                ui.tags.summary('Filtros de exploración', class_='filter-title'),
+                ui.tags.summary('Tu equipo de exploración', class_='filter-title'),
                 ui.div(
                     ui.p('Una selección, todas las vistas.', class_='muted small'),
                     ui.input_text('search', 'Buscar meteorito', placeholder='Nombre, por ejemplo Allende'),
@@ -96,23 +112,18 @@ app_ui = ui.page_fluid(
                 open=True),
             ui.div(ui.span('01 / ARCHIVO TERRESTRE'),
                    ui.p('Fragmentos del espacio.\nHistorias conservadas en la Tierra.'), class_='sidebar-foot'),
-            class_='sidebar'),
+            class_='sidebar', id='exploration-filters', **{'aria-label': 'Panel de filtros', 'inert': ''}),
         ui.tags.main(
-            ui.div(ui.div(eyebrow('EXPLORACIÓN · CIENCIA · DESCUBRIMIENTO'),
-                         ui.h1('Un universo de', ui.br(), ui.span('huellas en la Tierra.')),
-                         ui.p('Explorá los meteoritos del catálogo de NASA y descubrí las historias que cuentan su masa, su ubicación y su registro.', class_='hero-description')),
-                   ui.div(ui.div(class_='orbit orbit-one'), ui.div(class_='orbit orbit-two'),
-                          ui.div(class_='planet'), ui.span('45 716', class_='orbit-count'),
-                          ui.span('REGISTROS · MUCHAS HISTORIAS', class_='orbit-label'),
-                          class_='hero-art', **{'aria-hidden': 'true'}), class_='hero'),
+            ui.div(ui.div(eyebrow('BITÁCORA DE LA EXPEDICIÓN'), ui.h2('Tu universo de registros.')), ui.tags.button('Ajustar filtros', type='button', class_='open-filters'), class_='workbench-heading'),
             ui.output_ui('metrics'),
             ui.div(ui.div(ui.span(class_='selection-dot'), ui.output_text('selection_text', inline=True)),
                    ui.div('Actualizando vistas…', id='busy-label', role='status'),
                    class_='selection-bar', **{'aria-live': 'polite'}),
+            ui.output_text('active_filters'),
             ui.output_ui('filter_warning'),
             ui.tags.section(
                 ui.tags.section(
-                    ui.div(ui.div(eyebrow('01 / GEOGRAFÍA DEL CATÁLOGO'), ui.h2('Cada punto, una historia.')),
+                    ui.div(ui.div(eyebrow('01 / GEOGRAFÍA DEL CATÁLOGO'), ui.h2('¿Dónde encontramos sus huellas?')),
                            ui.input_radio_buttons('map_mode', None,
                                {'points': 'Meteoritos', 'concentration': 'Concentración'}, inline=True),
                            class_='panel-heading'),
@@ -131,13 +142,14 @@ app_ui = ui.page_fluid(
                     class_='insights'),
                 id='page-explorer', class_='atlas-page active'),
             ui.tags.section(
+                chapter('masses', 'DE LO DIMINUTO A LO EXTRAORDINARIO', 'Un tamaño no cuenta toda la historia.', 'Las masas abarcan muchos órdenes de magnitud. Una escala logarítmica permite ver lo que los valores más grandes suelen esconder. Ilustración conceptual, sin proporción de masas.'),
                 ui.div(eyebrow('02 / PATRONES Y CONTRASTES'), ui.h2('Mirar más allá del punto.'),
-                       ui.p('Cada gráfico responde una pregunta distinta. Zoom y leyendas solo modifican su propia vista. Los filtros de la izquierda actualizan todo el atlas.'), class_='section-intro'),
+                       ui.p('Cada gráfico responde una pregunta distinta. Zoom y leyendas solo modifican su propia vista. El panel Filtros actualiza todo el atlas.'), class_='section-intro'),
                 ui.div(
-                    chart_panel('DISTRIBUCIÓN', '¿Cuánto pesan los meteoritos?',
+                    chart_panel('DISTRIBUCIÓN', '¿Cuánto pesan los visitantes del espacio?',
                                 'Frecuencia por intervalo de masa. La escala logarítmica permite comparar órdenes de magnitud y excluye masas cero o ausentes.',
                                 'mass-chart', ui.input_radio_buttons('mass_scale', None, {'log': 'Logarítmica', 'linear': 'Original'}, inline=True)),
-                    chart_panel('COMPOSICIÓN', '¿Qué clases predominan?',
+                    chart_panel('COMPOSICIÓN', '¿Son todos los meteoritos iguales?',
                                 'Las 12 clases más frecuentes de la selección, separadas por condición. Las demás clases siguen incluidas en las otras vistas.', 'classes-chart'),
                     chart_panel('REGISTRO TEMPORAL', '¿Cómo cambia el catálogo en el tiempo?',
                                 'El año corresponde a la caída observada o al hallazgo según la condición. No representa necesariamente el año del impacto. Arrastrá para acercar y usá el selector inferior.',
@@ -148,15 +160,17 @@ app_ui = ui.page_fluid(
                     class_='charts-grid'),
                 id='page-analysis', class_='atlas-page'),
             ui.tags.section(
+                chapter('archive', 'EL ARCHIVO DE MIGA', 'Cada nombre guarda una historia.', 'Soy Miga, tu sonda de exploración. Aquí podés seguir una pista, comparar registros y llevarte los datos de tu selección.'),
                 ui.div(ui.div(eyebrow('03 / ARCHIVO EXPLORABLE'), ui.h2('Las historias, registro a registro.'),
-                              ui.p('Buscá nombres con el filtro general. Ordená las columnas con sus encabezados. El CSV contiene todos los registros de la selección y las banderas de calidad.')),
+                              ui.p('Buscá nombres con el filtro general. Ordená las columnas con sus encabezados. Las celdas vacías indican valores no informados. El CSV contiene todos los registros de la selección y las banderas de calidad.')),
                        ui.download_button('download_csv', '↓ Descargar CSV', class_='download-btn'), class_='section-intro table-heading'),
                 ui.div(ui.output_data_frame('catalogue'), class_='panel table-panel'),
                 id='page-catalogue', class_='atlas-page'),
             ui.tags.section(
+                chapter('method', 'EL TALLER DE LA EVIDENCIA', 'Preguntar también es revisar.', 'Un dato desconocido no es un cero. Una coordenada dudosa no es una ubicación. Seguimos cada registro desde la fuente hasta su visualización.'),
                 ui.div(eyebrow('04 / FUENTES Y CRITERIO'), ui.h2('La ciencia empieza por los datos.'),
                        ui.p('Un catálogo histórico y público para practicar análisis exploratorio, programación reactiva y lectura crítica de evidencia.'), class_='section-intro'),
-                ui.output_ui('about_data'), id='page-about', class_='atlas-page'),
+                ui.div(ui.div(ui.strong('45 716'), ui.span('registros conservados')), ui.div(ui.strong('32 186'), ui.span('ubicaciones utilizables')), ui.div(ui.strong('13 530'), ui.span('registros fuera del mapa')), class_='quality-path'), ui.output_ui('about_data'), id='page-about', class_='atlas-page'),
             ui.tags.footer(ui.span('ATLAS DE METEORITOS'), ui.span('NASA · The Meteoritical Society'),
                            ui.span('Borrador universitario local · 2026'), class_='footer'),
             id='main-content'),
@@ -218,6 +232,26 @@ def server(input, output, session):
     def selection_text():
         df = selected()
         return f'{number(len(df))} registros · {number(len(df) / len(DATA) * 100, 1)} % del catálogo'
+
+    @render.text
+    def active_filters():
+        parts = []
+        if input.search().strip():
+            parts.append('Nombre: ' + input.search().strip())
+        if tuple(input.years()) != (YEAR_MIN, YEAR_MAX):
+            parts.append(f'Años: {input.years()[0]} a {input.years()[1]}')
+        if set(input.condition()) != {'Found', 'Fell'}:
+            parts.append('Condición: ' + (', '.join('Hallazgo' if x == 'Found' else 'Caída observada' for x in input.condition()) or 'ninguna'))
+        if input.classes():
+            parts.append('Clases: ' + ', '.join(CLASS_LABELS[x] for x in input.classes()))
+        if input.mass_min() != 0 or input.mass_max() != MASS_MAX:
+            parts.append(f'Masa: {number(input.mass_min())} a {number(input.mass_max())} g')
+        if input.geography() != 'all':
+            parts.append('Ubicación: ' + ('utilizable' if input.geography() == 'valid' else 'no utilizable'))
+        for key, label in [('unknown_year', 'año desconocido'), ('unknown_mass', 'masa desconocida'), ('zero_mass', 'masa cero')]:
+            if not input[key]():
+                parts.append('Excluye ' + label)
+        return ' · '.join(parts) if parts else 'Todos los filtros abiertos al catálogo completo.'
 
     @render.ui
     def filter_warning():
@@ -291,7 +325,7 @@ def server(input, output, session):
                                   ui.tags.li('¿Cómo se distribuyen las masas y cómo varían por condición o clase?'),
                                   ui.tags.li('¿Cómo cambian los registros de caída y hallazgo a través del tiempo?'),
                                   ui.tags.li('¿Cuáles son las clasificaciones más frecuentes?')), class_='panel prose'),
-            ui.tags.article(ui.markdown(quality), class_='panel prose'),
+            ui.tags.details(ui.tags.summary('Abrir la bitácora completa de limpieza'), ui.markdown(quality), class_='panel prose methodology'),
             ui.tags.article(ui.h3('Alcance académico'),
                        ui.p('Borrador local e independiente en Shiny para Python. Quedan pendientes los nombres, carnés, roles y contribuciones del equipo, la evidencia real de trabajo con Git y la fecha de entrega confirmada por el docente.'),
                        ui.p('La aplicación inicia desde archivos locales. La cartografía Natural Earth se usa solo como referencia visual y no asigna países a los meteoritos.'), class_='panel prose'),

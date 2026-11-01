@@ -6,7 +6,7 @@
   let rows = []
   let mode = 'points'
   let mapVersion = 0
-  const colors = { Found: '#55ddcf', Fell: '#ffbc75' }
+  const colors = { Found: '#42d7ae', Fell: '#ffb35f' }
   const fmt = new Intl.NumberFormat('es-CR', { maximumFractionDigits: 2 })
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]))
@@ -132,7 +132,7 @@
       if (!response.ok) throw new Error('Cartografía no disponible')
       return response.json()
     }).then(geo => {
-      L.geoJSON(geo, { style: { color: '#38516d', weight: .65, fillColor: '#172b42', fillOpacity: .8 }, interactive: false }).addTo(map).bringToBack()
+      L.geoJSON(geo, { style: { color: '#72a292', weight: .65, fillColor: '#315a67', fillOpacity: .8 }, interactive: false }).addTo(map).bringToBack()
       document.getElementById('atlas-map').dataset.basemap = 'ready'
     }).catch(() => {
       map.attributionControl.addAttribution('Mapa base no disponible, se muestran coordenadas')
@@ -152,7 +152,7 @@
       'Sorry, there was a problem downloading your image!': 'No se pudo descargar la imagen. Intentá de nuevo.',
     } })
     const details = document.querySelector('.sidebar details')
-    if (window.innerWidth <= 900) details.open = false
+    details.open = true
     document.querySelectorAll('[data-page]').forEach(button => {
       button.addEventListener('click', () => {
         document.querySelectorAll('[data-page]').forEach(item => {
@@ -208,7 +208,7 @@
           figure.layout.margin = { ...figure.layout.margin, l: id === 'classes-chart' ? 74 : 58, r: 18, t: 40 }
           figure.layout.font.size = 10
         }
-        figure.layout.transition = { duration: 0 }
+        figure.layout.transition = { duration: (reducedMotion || document.body.classList.contains('motion-paused')) ? 0 : 250 }
         await Plotly.react(node, figure.data, figure.layout, {
           responsive: true, displaylogo: false, locale: 'es', displayModeBar: true,
           scrollZoom: false, modeBarButtonsToRemove: ['select2d', 'lasso2d', 'sendDataToCloud', 'sendChartToCloud'],

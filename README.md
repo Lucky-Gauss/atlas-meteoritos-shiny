@@ -130,3 +130,10 @@ Las pruebas automáticas y el recorrido manual del navegador se documentan en `d
 ## Pendientes académicos
 
 Este borrador no sustituye la entrega colaborativa. Faltan integrantes, carnés, roles, contribuciones y evidencia real de uso de Git. La guía consultada imprime una fecha de entrega 23/11/2025 que debe confirmarse con el docente para el ciclo 2026. No se inventaron esos datos ni se modificó el repositorio del equipo.
+
+## Dos experiencias disponibles
+
+- [Expedición ilustrada](https://lucky-gauss.github.io/atlas-meteoritos-shiny/)
+- [Atlas clásico](https://lucky-gauss.github.io/atlas-meteoritos-shiny/clasico/)
+
+El rediseño, los recursos originales y la verificación están documentados en `docs/rediseno.md`. La versión clásica se conserva desde un commit fijo. El exportador necesita el historial de Git para reconstruir ambas versiones.
