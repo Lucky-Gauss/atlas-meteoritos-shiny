@@ -1,0 +1,44 @@
+name: Publicar Atlas de meteoritos
+on:
+  push:
+    branches: [main]
+    paths: ['atlas-publicacion.zip', '.github/workflows/publicar.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preparar archivos de la aplicación
+        run: unzip -o atlas-publicacion.zip
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Instalar exportador
+        run: python -m pip install shinylive==0.8.13
+      - name: Generar aplicación web
+        run: |
+          shinylive export app site
+          touch site/.nojekyll
+          cp Informe_Atlas_Meteoritos.pdf site/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4
